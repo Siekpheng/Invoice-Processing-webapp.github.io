@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Upload</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Upload an Invoice</h1>
+    <form id="upload-form" action="https://<your-backend-url>" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf" required>
+        <button type="submit">Upload</button>
+    </form>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
