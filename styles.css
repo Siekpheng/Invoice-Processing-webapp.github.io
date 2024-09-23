@@ -1,14 +1,108 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* .logo img {
+    height: 80px;
+} */
+
+.hero {
+    background: #e0e0e0;
+    padding: 100px 0;
     text-align: center;
 }
 
-h1 {
-    color: #333;
+.hero h2 {
+    font-size: 48px;
 }
 
-form {
+.hero p {
+    font-size: 18px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
     margin-top: 20px;
+    border-radius: 5px;
+}
+
+.drag-drop-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.drag-drop-area {
+    border: 2px dashed #ccc;
+    padding: 50px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.drag-drop-area p {
+    font-size: 16px;
+    color: #666;
+}
+
+.upload-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+}
+
+.feature {
+    margin: 20px;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
