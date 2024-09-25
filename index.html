@@ -30,11 +30,14 @@
     </section>
 
     <section class="drag-drop-section">
-        <div class="drag-drop-area">
+        <div id="drag-drop-area" class="drag-drop-area">
             <p>Drag and drop files here or</p>
-            <button class="upload-btn">Browse Files</button>
+            <input type="file" id="fileInput" style="display:none;" multiple>
+            <button id="upload-btn" class="upload-btn">Browse Files</button>
         </div>
+        <div id="file-list"></div> <!-- To display selected files -->
     </section>
+    
 
     <section class="features">
         <h3>Supported Features</h3>
