@@ -25,22 +25,27 @@ dragDropArea.addEventListener('drop', function (e) {
     displayFiles(e.dataTransfer.files);  // Display dropped files
 });
 
-// Function to display uploaded files with download links
+// Function to display uploaded files with download links using FileReader
 function displayFiles(files) {
     const fileList = document.getElementById('file-list');
-    fileList.innerHTML = '';  // Clear any previously listed files
+    fileList.innerHTML = '';  // Clear any previous file list
 
     for (const file of files) {
         const listItem = document.createElement('div');
         listItem.textContent = file.name;
 
-        const downloadLink = document.createElement('a');
-        downloadLink.href = URL.createObjectURL(file);  // Create a temporary URL for the file
-        downloadLink.download = file.name;
-        downloadLink.textContent = ' Download';
-        downloadLink.style.marginLeft = '10px';
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const downloadLink = document.createElement('a');
+            downloadLink.href = e.target.result;
+            downloadLink.download = file.name;
+            downloadLink.textContent = ' Download';
+            downloadLink.style.marginLeft = '10px';
 
-        listItem.appendChild(downloadLink);
-        fileList.appendChild(listItem);  // Add the file and its download link to the file list
+            listItem.appendChild(downloadLink);
+        };
+        reader.readAsDataURL(file);  // Convert file to a base64-encoded URL
+
+        fileList.appendChild(listItem);
     }
 }
