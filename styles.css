@@ -1,20 +1,30 @@
+/* Center the body content and add spacing */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center all body content */
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
 }
 
+/* Center navbar contents */
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #56abe1;
+    width: 100%; /* Full width navbar */
     color: white;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
+    justify-content: center;
 }
 
 .navbar li {
@@ -26,14 +36,12 @@ body {
     text-decoration: none;
 }
 
-/* .logo img {
-    height: 80px;
-} */
-
+/* Hero section: centered and with added padding */
 .hero {
     background: #e0e0e0;
     padding: 100px 0;
     text-align: center;
+    width: 100%; /* Full width */
 }
 
 .hero h2 {
@@ -54,10 +62,15 @@ body {
     border-radius: 5px;
 }
 
+/* Drag and drop section */
 .drag-drop-section {
     background-color: #f9f9f9;
     padding: 50px 0;
     text-align: center;
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center the section */
 }
 
 .drag-drop-area {
@@ -83,9 +96,17 @@ body {
     margin-top: 10px;
 }
 
+/* Center file list */
+#file-list {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Feature list section: Centered */
 .features {
     padding: 50px 20px;
     text-align: center;
+    width: 100%;
 }
 
 .feature-list {
@@ -105,4 +126,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    width: 100%; /* Full width */
 }
